@@ -1,17 +1,62 @@
-# Modern Portfolio Website
+# موقع بورتفوليو عصري
 
-A responsive and modern portfolio website built with React, Styled Components, and Framer Motion. This single-page application showcases your skills, projects, and contact information in a clean and interactive way.
+موقع بورتفوليو تفاعلي متجاوب مبني باستخدام React و Styled Components و Framer Motion. يعرض المهارات والمشاريع ومعلومات الاتصال بطريقة أنيقة وسهلة الاستخدام.
 
-## Features
+## معلومات الطالب
+- **الاسم:** عبد الفتاح أبو شكيان
+- **الرقم الجامعي:** 120210664
+- **المادة:** تطوير الويب 1 - مختبر نهائي
 
-- 🌓 Light/Dark mode
-- 📱 Fully responsive design
-- ✨ Smooth animations and transitions
-- 📝 Contact form with validation
-- 📊 Skills progress bars
-- 🎯 Project filtering
-- 📱 Mobile-friendly navigation
-- ⚡ Optimized performance
+## الميزات الرئيسية
+
+- 🌓 وضع الضوء/الظلام
+- 📱 تصميم متجاوب يعمل على جميع الأجهزة
+- ✨ تأثيرات حركية سلسة
+- 📝 نموذج اتصال مع تحقق من صحة البيانات
+- 📊 أشرطة تقدم للمهارات
+- 🎯 تصفية المشاريع حسب الفئة
+- 📱 تنقل سهل على الأجهزة المحمولة
+- ⚡ أداء مُحسن
+
+## التقنيات المستخدمة
+
+- ⚛️ React 18
+- 💅 Styled Components
+- 🎨 Framer Motion
+- 📱 React Icons
+- 🔍 React Intersection Observer
+- 📱 React Responsive
+
+## إعداد خادم نموذج الاتصال
+
+### المتطلبات الأساسية
+
+- Node.js (الإصدار 14 أو أحدث)
+- npm أو yarn
+
+### خطوات الإعداد
+
+1. انتقل إلى مجلد المشروع:
+   ```bash
+   cd server
+   ```
+
+2. قم بتثبيت الحزم المطلوبة:
+   ```bash
+   npm install express cors
+   ```
+
+3. قم بتشغيل الخادم:
+   ```bash
+   node server.js
+   ```
+
+4. سيعمل الخادم على المنفذ 3001 وسيقوم بحفظ الردود في مجلد `contact-form-responses`
+
+### ملاحظات هامة
+- تأكد من تشغيل الخادم قبل إرسال النموذج
+- يتم حفظ كل رد في ملف JSON منفصل مع طابع زمني
+- يمكنك العثور على الردود المحفوظة في مجلد `contact-form-responses`
 
 ## Technologies Used
 
@@ -23,18 +68,90 @@ A responsive and modern portfolio website built with React, Styled Components, a
 - 🔍 React Intersection Observer
 - 📱 React Responsive
 
-## Getting Started
+## البدء
 
-### Prerequisites
+### المتطلبات الأساسية
 
-- Node.js (v14 or later)
-- npm or yarn
+- Node.js (الإصدار 14 أو أحدث)
+- npm أو yarn
+
+### خطوات التشغيل
+
+1. استنسخ المستودع:
+   ```bash
+   git clone https://github.com/mxarkan/portfolio.git
+   cd portfolio
+   ```
+
+2. قم بتثبيت المكتبات المطلوبة:
+   ```bash
+   npm install
+   # أو
+   yarn install
+   ```
+
+3. ابدأ خادم التطوير:
+   ```bash
+   npm start
+   # أو
+   yarn start
+   ```
+
+4. افتح المتصفح على العنوان:
+   ```
+   http://localhost:3000
+   ```
+
+## تحديث المعلومات الشخصية
+
+1. **رأس الصفحة**: قم بتحديث `src/components/Header.js` بالبيانات الشخصية وروابط التواصل الاجتماعي.
+2. **قسم الملف الشخصي**: قم بتحديث `src/components/About.js` بالمعلومات الشخصية والسيرة الذاتية.
+3. **المهارات**: قم بتحديث `src/components/Skills.js` بالمهارات ومستويات الإتقان.
+4. **المشاريع**: قم بتحديث `src/components/Projects.js` بالمشاريع الخاصة بك.
+5. **اتصل بي**: قم بتحديث معلومات الاتصال في `src/components/Contact.js`.
+
+## النشر
+
+### إنشاء نسخة للإنتاج
+
+```bash
+npm run build
+# أو
+yarn build
+```
+
+سيتم إنشاء مجلد `build` يحتوي على الملفات المحسنة جاهزة للنشر.
+
+### النشر على GitHub Pages
+
+1. قم بتثبيت حزمة gh-pages:
+   ```bash
+   npm install --save gh-pages
+   # أو
+   yarn add gh-pages
+   ```
+
+2. أضف الأوامر التالية إلى ملف `package.json`:
+   ```json
+   "homepage": "https://mxarkan.github.io/portfolio",
+   "scripts": {
+     "predeploy": "npm run build",
+     "deploy": "gh-pages -d build"
+   }
+   ```
+
+3. قم بالنشر:
+   ```bash
+   npm run deploy
+   # أو
+   yarn deploy
+   ```
 
 ### Installation
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/portfolio.git
+   git clone https://github.com/mxarkan/portfolio.git
    cd portfolio
    ```
 
@@ -115,18 +232,3 @@ This will create a `build` folder with optimized and minified files ready for de
    yarn deploy
    ```
 
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## Acknowledgments
-
-- [Create React App](https://create-react-app.dev/)
-- [Styled Components](https://styled-components.com/)
-- [Framer Motion](https://www.framer.com/motion/)
-- [React Icons](https://react-icons.github.io/react-icons/)
-- [EmailJS](https://www.emailjs.com/)
-
----
-
-Feel free to customize this template to make it your own! If you have any questions or run into any issues, please open an issue on GitHub.
